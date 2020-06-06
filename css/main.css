@@ -1,0 +1,26 @@
+@font-face{
+    font-family: "bubble";
+    src: url("/fonts/bubble/bubbleboddyneue-regular\ trial.ttf");
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background:rgb(243, 237, 250);
+}
+.title{
+    background: #70FFBD;
+    font-family: "bubble";
+    min-height: 30vh;
+}
+.logo{
+    max-height: 10vh;
+    max-width: 10w;
+    border-radius: 15%;
+}
+.homeimg{
+    max-width: 40vw;
+    max-height: 40vh;
+}
+.presentation{
+    background:rgba(112, 255, 188, 0.438) ;
+    border-radius: 10%;
+}
