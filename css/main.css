@@ -5,6 +5,7 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     background:rgb(243, 237, 250);
+    font-size: 1.2rem;
 }
 .title{
     background: #70FFBD;
@@ -13,14 +14,14 @@ body{
 }
 .logo{
     max-height: 10vh;
-    max-width: 10w;
-    border-radius: 15%;
+    max-width: 10vw;
+    border-radius: 15px;
 }
 .homeimg{
-    max-width: 40vw;
-    max-height: 40vh;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 .presentation{
     background:rgba(112, 255, 188, 0.438) ;
-    border-radius: 10%;
+    border-radius: 20px;
 }
