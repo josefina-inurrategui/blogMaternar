@@ -15,7 +15,6 @@ body{
 .title{
     background: #70FFBD;
     font-family: "bubble";
-    min-height: 30vh;
 }
 .logo{
     max-height: 10vh;
