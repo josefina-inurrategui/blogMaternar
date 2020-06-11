@@ -16,14 +16,15 @@ async function placeAllPosts(){
     posts.forEach(element => {
         const title = element.Titulo;
         const img = element.Img;
-        const prepost = element.Prepost;
         const divPosteo = document.createElement("div");
             divPosteo.className = "col-md-4 col-xs-12 text-center py-3";
         const portada = document.createElement("img");
             portada.className = "img-thumbnail portadas shadow";
+            portada.dataset.toggle = "modal"
+            portada.dataset.target = "#modal"
             portada.src = img;
         const textoTitulo = document.createElement("p");
-            textoTitulo.className = "text-dark bg-warning";
+            textoTitulo.className = "text-dark bg-warning postTitulo mx-auto rounded";
             textoTitulo.innerHTML = title;
 
             divPosteo.appendChild(portada);
@@ -31,46 +32,25 @@ async function placeAllPosts(){
             divRow.appendChild(divPosteo);
             blog.appendChild(divRow)
 
-/*         portada.addEventListener("click",()=>{
-            const modal = document.createElement("div");
-                modal.className = "modal fade";
-                modal.id = "modalScroll";
-                modal.tabIndex = "-1";
-                modal.role = "dialog";
-            const modalDialog = document.createElement("div");
-                modalDialog.className = "modal-dialog modal-dialog-scrollable";
-                modalDialog.role = "document";
-            const modalContent = document.createElement("div");
-                modalContent.className = "modal-content";
-            const modalHeader = document.createElement("div");
-                modalHeader.className = "modal-header";
-            const modalHeaderText = document.createElement("h5");
-                modalHeaderText.className = "modal-title";
-                modalHeaderText.innerHTML = title;
-            const close = document.createElement("button");
-                close.type ="button";
-                close.className="close";
-            close.style.data-dismiss = "modal";
-            const modalfoto = document.createElement("img");
-                modalfoto.className = "fotoposteo modal body"
-            const modalBody = document.createElement("div");
-                modalBody.innerHTML= prepost + element.post
-            const modalFooter = document.createElement("div")
-                modalFooter.className = "modal-footer"
-            const modalLike = document.createElement("i")
-                modalLike.className = "far fa heart text-dark"
+    portada.addEventListener("click",()=>{
+        document.getElementById("TituloModal").innerHTML = element.Titulo
+        document.getElementById("fotoModal").src = element.foto
+        document.getElementById("posteoModal").innerHTML = element.Prepost + element.Post
+        const heart = document.getElementById("heart")
+        heart.addEventListener("click",()=>{
+            heart.className = "fas fa-heart fa-2x text-danger"
+        })
+    })
+})
+    document.getElementById("close").addEventListener("click",()=>{
+        document.getElementById("heart").className = "far fa-heart fa-2x"
+    })
 
-            modalHeader.appendChild(modalHeaderText)
-            modalHeader.appendChild(close)
-            modalFooter.appendChild(modalLike)
-            modalContent.appendChild(modalHeader)
-            modalContent.appendChild(modalfoto)
-            modalContent.appendChild(modalBody)            
-            modalContent.appendChild(modalFooter)
-            modalDialog.appendChild(modalContent)
-            modal.appendChild(modalDialog)
-            blog.appendChild(modal)        })  */
 
-    }) 
+
+
 };
+    /* modal */
 
+/* <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+    Launch demo modal */

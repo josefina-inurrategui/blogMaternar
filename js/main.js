@@ -24,12 +24,13 @@ async function placeLastPosts(){
             portada.className = "img-thumbnail portadas shadow";
             portada.src = img;
         const textoTitulo = document.createElement("p");
-            textoTitulo.className = "text-dark bg-warning";
+            textoTitulo.className = "text-dark bg-warning postTitulo mx-auto rounded";
             textoTitulo.innerHTML = title;
 
             divPosteo.appendChild(portada);
             divPosteo.appendChild(textoTitulo);
             divRow.appendChild(divPosteo);
             lastPostSpace.appendChild(divRow)
-    }) 
+
+    })
 };
