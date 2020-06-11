@@ -1,5 +1,6 @@
 body{
-    font-family: 'Amaranth', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
     background:rgb(243, 237, 250);
     font-size: 1.2rem;
 }
@@ -12,8 +13,8 @@ body{
     background: #A1FFCB;
 }
 .logo{
-    max-height: 35vh;
-    max-width: 35vw;
+    max-height: 32vh;
+    max-width: 32vw;
 }
 
 .presentation{
