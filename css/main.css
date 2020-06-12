@@ -43,3 +43,9 @@ h1{
 .postTitulo{
     max-width: 15vw;
 }
+.modal-dialog{
+    min-width: 70vw
+}
+.violet{
+    background: #E6D4FF;
+}
