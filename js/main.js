@@ -13,24 +13,35 @@ async function placeLastPosts(){
     const lastPosts = posts.slice(0,3);
             console.log(lastPosts);
     const divRow = document.createElement("div");
-        divRow.className = "row flex-wrap justify-content-center pt-5";
+        divRow.className = "row flex-wrap justify-content-between pt-5 margeeeen";
     lastPosts.forEach(element => {
         const title = element.Titulo;
         const img = element.Img;
         const prepost = element.Prepost;
         const divPosteo = document.createElement("div");
-            divPosteo.className = "col-md-3 col-xs-12 text-center";
+            divPosteo.className = "col-md-3 col-xs-12 card paddingcero ";
         const portada = document.createElement("img");
-            portada.className = "img-thumbnail portadas shadow";
+            portada.className = "card-img portadaimg ";
             portada.src = img;
+        const portadafooter = document.createElement("div")
+            portadafooter.className = "card-img-overlay paddingcero  d-flex flex-column  justify-content-end"
         const textoTitulo = document.createElement("p");
-            textoTitulo.className = "text-dark bg-warning postTitulo mx-auto rounded";
+            textoTitulo.className = "text-dark textoportada paddingcero text-bottom rounded";
             textoTitulo.innerHTML = title;
 
             divPosteo.appendChild(portada);
-            divPosteo.appendChild(textoTitulo);
+            portadafooter.appendChild(textoTitulo);
+            divPosteo.appendChild(portadafooter)
             divRow.appendChild(divPosteo);
             lastPostSpace.appendChild(divRow)
+
+        divPosteo.addEventListener("mouseenter",()=>{
+            textoTitulo.innerHTML = prepost
+        })
+        divPosteo.addEventListener("mouseleave",()=>{
+            textoTitulo.innerHTML = title
+        })
+        
 
     })
 };

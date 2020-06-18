@@ -16,14 +16,12 @@ body{
     max-height: 32vh;
     max-width: 32vw;
 }
-
 .presentation{
     background:rgba(234, 224, 258, 0.438) ;
     padding: 20px;
     border: solid;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
-
 .imagenhome{
     border-radius: 600px;
 }
@@ -31,21 +29,35 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
-.portadas{
-    max-height: 40vh;
-    max-width: 40vw;
+.paddingcero{
+    padding: 0;
+    margin: 0;
+}
+.portadaimg{
+    max-width: 30vw;
+    max-height: 50vh;
+}
+.card{
     cursor: pointer;
 }
 .fotoposteo{
     max-height: 30vh;
     max-width: 30vw;
 }
-.postTitulo{
-    max-width: 15vw;
-}
 .modal-dialog{
     min-width: 70vw
 }
 .violet{
     background: #E6D4FF;
+}
+
+.margeeeen{
+    margin-bottom:1000px ;
+}
+.textoportada{
+    background-color:#fff9a3ad ;
+    size: 0.7rem;
+    padding-left: 2%;
+    padding-right: 2%;
+   
 }
