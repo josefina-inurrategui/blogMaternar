@@ -18,11 +18,11 @@ async function placeAllPosts(){
             const img = element.Img;
             const prepost = element.Prepost;
             const divPosteo = document.createElement("div");
-                divPosteo.className = "col-md-3 col-xs-12 card paddingcero mx-2 my-2";
-            const portada = document.createElement("img");
+                divPosteo.className = "col-3 card paddingcero mx-2 my-2";
+                divPosteo.dataset.toggle = "modal"
+                divPosteo.dataset.target = "#modal1"
+                const portada = document.createElement("img");
                 portada.className = "card-img portadaimg";
-                portada.dataset.toggle = "modal"
-                portada.dataset.target = "#modal"
                 portada.src = img;
             const portadafooter = document.createElement("div")
                 portadafooter.className = "card-img-overlay paddingcero  d-flex flex-column  justify-content-end"
@@ -36,14 +36,15 @@ async function placeAllPosts(){
                 divRow.appendChild(divPosteo);
                 blog.appendChild(divRow)
 
-        divPosteo.addEventListener("mouseenter",()=>{
+/*         divPosteo.addEventListener("mouseenter",()=>{
             textoTitulo.innerHTML = prepost
         })
         divPosteo.addEventListener("mouseleave",()=>{
             textoTitulo.innerHTML = title
-        })              
+        })               */
 
-        portada.addEventListener("click",()=>{
+        divPosteo.addEventListener("click",()=>{
+            console.log("PORQUEEE")
             document.getElementById("TituloModal").innerHTML = element.Titulo
             document.getElementById("fotoModal").src = element.foto
             document.getElementById("posteoModal").innerHTML = element.Prepost + element.Post
