@@ -12,7 +12,7 @@ async function placeAllPosts(){
     const posts = await getposts();
               console.log(posts);
     const divRow = document.createElement("div");
-        divRow.className = "row flex-wrap justify-content-center pt-3";
+        divRow.className = "row flex-wrap justify-content-center pt-3 mb-5";
         posts.forEach(element => {
             const title = element.Titulo;
             const img = element.Img;
@@ -36,15 +36,14 @@ async function placeAllPosts(){
                 divRow.appendChild(divPosteo);
                 blog.appendChild(divRow)
 
-/*         divPosteo.addEventListener("mouseenter",()=>{
-            textoTitulo.innerHTML = prepost
-        })
-        divPosteo.addEventListener("mouseleave",()=>{
-            textoTitulo.innerHTML = title
-        })               */
+                divPosteo.addEventListener("mouseenter",()=>{
+                    textoTitulo.innerHTML = prepost
+                })
+                divPosteo.addEventListener("mouseleave",()=>{
+                    textoTitulo.innerHTML = title
+                })
 
         divPosteo.addEventListener("click",()=>{
-            console.log("PORQUEEE")
             document.getElementById("TituloModal").innerHTML = element.Titulo
             document.getElementById("fotoModal").src = element.foto
             document.getElementById("posteoModal").innerHTML = element.Prepost + element.Post
@@ -57,10 +56,24 @@ async function placeAllPosts(){
         document.getElementById("close").addEventListener("click",()=>{
             document.getElementById("heart").className = "far fa-heart fa-2x"
         })
-
-
 };
-    /* modal */
+const searchInput = document.getElementById("search")
+const searchBtn = document.getElementById("searchBtn")
 
-/* <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-    Launch demo modal */
+async function searching(){
+    const post = await getposts();
+    console.log(post);
+    document.getElementById("resultPost").className = "container bg-warning py-5 mr-1"
+    post.forEach(element=>{
+        const posteoPosible = element.Titulo
+        if (element.clave.indexOf(searchInput) === -1) {
+            console.log(element.clave);
+        } else if (element.clave.indexOf(searchInput) > -1) {
+            console.log(searchInput + ' ya existe en la colección de verduras.');
+        }
+    })
+
+}
+
+
+searchInput.addEventListener("keyup",searching)

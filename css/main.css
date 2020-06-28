@@ -51,13 +51,13 @@ h1{
     background: #E6D4FF;
 }
 
-.margeeeen{
-    margin-bottom:1000px ;
-}
 .textoportada{
     background-color:#fff9a3ad ;
     size: 0.7rem;
     padding-left: 2%;
     padding-right: 2%;
    
+}
+.hiden{
+    display: none;
 }

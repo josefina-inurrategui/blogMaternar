@@ -13,13 +13,15 @@ async function placeLastPosts(){
     const lastPosts = posts.slice(0,3);
             console.log(lastPosts);
     const divRow = document.createElement("div");
-        divRow.className = "row flex-wrap justify-content-between pt-5 margeeeen";
+        divRow.className = "row flex-wrap justify-content-between pt-5 mb-5";
     lastPosts.forEach(element => {
         const title = element.Titulo;
         const img = element.Img;
         const prepost = element.Prepost;
         const divPosteo = document.createElement("div");
             divPosteo.className = "col-md-3 col-xs-12 card paddingcero ";
+            divPosteo.dataset.toggle = "modal"
+            divPosteo.dataset.target = "#modal1"
         const portada = document.createElement("img");
             portada.className = "card-img portadaimg ";
             portada.src = img;
@@ -40,6 +42,15 @@ async function placeLastPosts(){
         })
         divPosteo.addEventListener("mouseleave",()=>{
             textoTitulo.innerHTML = title
+        })
+        divPosteo.addEventListener("click",()=>{
+            document.getElementById("TituloModal").innerHTML = element.Titulo
+            document.getElementById("fotoModal").src = element.foto
+            document.getElementById("posteoModal").innerHTML = element.Prepost + element.Post
+            const heart = document.getElementById("heart")
+            heart.addEventListener("click",()=>{
+                heart.className = "fas fa-heart fa-2x text-danger"
+            })
         })
         
 
