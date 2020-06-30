@@ -61,7 +61,6 @@ const searchInput = document.getElementById("search")
 const searchBtn = document.getElementById("searchBtn")
 const keywords = ["acuerdo","cambios","carga mental","carrera","celeste","compartir","comunidad","contacto","contención","contrato","crianza","cuarentena","cuentos","cuerpo","cuidado","cuidados","cultura","decisión","demanda","desafío","desahogo","Encierro","espera","estereotipo","estereotipos","experto","feminismo","fuerza","género","historia","ilusión","información","juego","juegos","juguetes","libertad","lucha","mandatos","maternidad","medicina","miedo","mitos","moraleja","niñez","normalidad","odio","pandemia","parto","paternidad","patrones","películas","pobreza","poder","profesión","programas","promesa","recuerdos","red","roles","rosa","rutina","sensibilidad","sociedad","sororidad","subjetividad","tareas","televisión","tiempo","vergüenza"]
 
-/*
 async function posteosEncontrados(){
     const posts = await getposts();
     const divRow = document.createElement("div");
@@ -69,11 +68,10 @@ async function posteosEncontrados(){
     posts.forEach(element => {  
         const busqueda = searchInput.value 
         const findKey = element.clave.includes(busqueda) 
-
-        findKey.forEach(element =>{
-            if(findKey = true){
-            console.log("miraa mamaa")  
-            /*     blog.innerHTML = ""
+        console.log(findKey)
+        if(findKey == true){
+            console.log("miraa mamaa") 
+            blog.innerHTML = ""
             const title = element.Titulo;
             const img = element.Img;
             const prepost = element.Prepost;
@@ -96,7 +94,7 @@ async function posteosEncontrados(){
             divRow.appendChild(divPosteo);
             blog.appendChild(divRow)
 
-            divPosteo.addEventListener("mouseenter",()=>{
+             divPosteo.addEventListener("mouseenter",()=>{
                 textoTitulo.innerHTML = prepost
             })
             divPosteo.addEventListener("mouseleave",()=>{
@@ -104,21 +102,21 @@ async function posteosEncontrados(){
             })
 
             divPosteo.addEventListener("click",()=>{
-            document.getElementById("TituloModal").innerHTML = element.Titulo
-            document.getElementById("fotoModal").src = element.foto
-            document.getElementById("posteoModal").innerHTML = element.Prepost + element.Post
-            const heart = document.getElementById("heart")
-            heart.addEventListener("click",()=>{
-                heart.className = "fas fa-heart fa-2x text-danger"
+                document.getElementById("TituloModal").innerHTML = element.Titulo
+                document.getElementById("fotoModal").src = element.foto
+                document.getElementById("posteoModal").innerHTML = element.Prepost + element.Post
+                const heart = document.getElementById("heart")
+                heart.addEventListener("click",()=>{
+                    heart.className = "fas fa-heart fa-2x text-danger"})
             })
-            })
-        document.getElementById("close").addEventListener("click",()=>{
-            document.getElementById("heart").className = "far fa-heart fa-2x"
-        })  
-         } 
-        }) 
+            document.getElementById("close").addEventListener("click",()=>{
+                document.getElementById("heart").className = "far fa-heart fa-2x"
+            }) 
+        }  
+        
     })
-}*/
+}
+
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,

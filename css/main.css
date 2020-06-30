@@ -94,3 +94,9 @@ h1{
     background-color: DodgerBlue !important;
     color: #ffffff;
   }
+
+  .form{
+    background:rgba(234, 224, 258, 0.438) ;
+    border: solid;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  }
