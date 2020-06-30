@@ -19,7 +19,7 @@ async function placeLastPosts(){
         const img = element.Img;
         const prepost = element.Prepost;
         const divPosteo = document.createElement("div");
-            divPosteo.className = "col-md-3 col-xs-12 card paddingcero ";
+            divPosteo.className = "col-8 col-md-3 card paddingcero mx-2 my-2 ";
             divPosteo.dataset.toggle = "modal"
             divPosteo.dataset.target = "#modal1"
         const portada = document.createElement("img");
