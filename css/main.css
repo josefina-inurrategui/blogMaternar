@@ -101,9 +101,16 @@ h1{
       max-width: 60%;
       margin-bottom: 5%;
   }
-
+  .ultiPost{
+    width: 30%;
+    padding: 0;
+    margin-left: -1%;
+  }
   @media (max-width: 991.98px) { 
       .posteosNO{
           margin: 20px
+      }
+      .ultiPost{
+          width: 90%;
       }
    }
