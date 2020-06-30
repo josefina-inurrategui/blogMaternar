@@ -13,7 +13,7 @@ async function placeLastPosts(){
     const lastPosts = posts.slice(0,3);
             console.log(lastPosts);
     const divRow = document.createElement("div");
-        divRow.className = "row flex-wrap justify-content-between pt-5 mb-5";
+        divRow.className = "row flex-wrap justify-content-center pt-5 mb-5";
     lastPosts.forEach(element => {
         const title = element.Titulo;
         const img = element.Img;
