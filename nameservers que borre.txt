@@ -1,0 +1,2 @@
+ns2.domain.com
+ns1.domain.com
